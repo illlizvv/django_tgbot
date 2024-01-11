@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправить рассылку</title>
+</head>
+<body>
+    <form action="{% url 'send_broadcast' %}" method="post"> 
+        {% csrf_token %}
+        <label for="message">Текст рассылки:</label>
+        <input type="text" id="message" name="message" placeholder="Напиши здесь текст" required>
+        <button type="submit">Отправить </button>
+    </form>
+</body>
+</html>
